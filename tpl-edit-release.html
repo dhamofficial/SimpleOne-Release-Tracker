@@ -1,0 +1,105 @@
+﻿<div>
+    <a ng-show="editmode" href="#/releases">Back</a>
+    <div class="row-border">
+        <h4 id="containers" ng-bind="Title"></h4>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Customer</label>
+            <select name="mySelect" id="mySelect" class="form-control" ng-options="option.name for option in Customers track by option.id" ng-model="Item.Customer"></select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputDefault">Version</label>
+            <input type="text" class="form-control" ng-model="Item.Version" />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputSmall">Build Number</label>
+            <input class="form-control" type="text" ng-model="Item.BuildNumber" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputSmall">Build Date</label>
+            <div class="input-group">
+                <!--<input class="form-control" id="datetimepicker" type="text" placeholder="dd/mm/yyyy" ng-model="Item.BuildDate">-->
+                <input type="text" class="form-control" datetimepicker ng-model="Item.BuildDate" placeholder="dd/mm/yyyy" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Environment</label>
+            <select name="mySelect" id="mySelect" class="form-control" ng-options="option.name for option in Environments track by option.id" ng-model="Item.Environment"></select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Release Type *</label>
+            <select name="mySelect" id="mySelect" class="form-control" ng-options="option.name for option in ReleaseTypes track by option.id" ng-model="Item.ReleaseType"></select>         
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Cloud URL</label>
+            <!--<input type="text" class="form-control" ng-model="Item.CloudUrl">-->
+            <tags-input ng-model="Item.CloudUrl" placeholder="add cloud url"></tags-input>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputDefault">DNS URL</label>
+            <!--<input type="text" class="form-control" ng-model="Item.DnsUrl">-->
+            <tags-input ng-model="Item.DnsUrl" placeholder="add dns url"></tags-input>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputSmall">Mobile URL</label>
+            <!--<input class="form-control" type="text" ng-model="Item.MobileUrl">-->
+            <tags-input ng-model="Item.MobileUrl" placeholder="add mobile url"></tags-input>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputSmall">DB Server</label>
+            <input class="form-control" type="text" ng-model="Item.DbServer" placeholder="database server path" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Database Name</label>
+            <input class="form-control" type="text" ng-model="Item.DbName" placeholder="" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Modules</label>
+            <tags-input ng-model="Item.Modules" min-length="2" placeholder="add modules"></tags-input>
+        </div>
+
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Hostname</label>
+            <input class="form-control" type="text" ng-model="Item.Hostname" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">VM Size</label>
+            <!--<input class="form-control" type="text" ng-model="Item.VmSize">-->
+            <tags-input ng-model="Item.VmSize" placeholder="add VM size"></tags-input>
+
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">Number of instances</label>
+            <select class="form-control" ng-model="Item.NumOfInstances">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="inputLarge">License Expiry Date</label>
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="mm/dd/yyyy" ng-model="Item.LicenseExpiryDate" datetimepicker />
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <input id="chkReleaseBuild" type="checkbox" ng-model="Item.ReleaseBuild">
+            <label class="control-label" for="chkReleaseBuild">Release Build</label>
+        </div>-->
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary" ng-click="save()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

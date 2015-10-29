@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>SimpleOne - Release</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/custom.min.css">
+    <link rel="stylesheet" href="css/ng-tags-input.min.css">    
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css" />
+     
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SimpleOne</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/releases">List</a></li>
+                        <li><a href="#/add">New Release</a></li>
+                        <li><a href="#/edit">Support</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid form-start">
+        <div class="row">
+            <div class="col-lg-12">
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-filter.min.js"></script>
+    <script type="text/javascript" src="js/ng-tags-input.min.js"></script>
+    <script type="text/javascript" src="js/min/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/angular-bootstrap-datetimepicker-directive.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
